@@ -18,11 +18,10 @@ namespace Lesson3
             {
                 employee.CountResultSalary();
                 employee.SetEmployeeType();
-                employee.SetEmployeeType();
 
                 Console.WriteLine($"Привет, {employee.Name} {employee.Surname}! Т.к. вы являетесь нашим сотрудником, " +
-                    $"который работает по типу контракта \"{employee.SetEmployeeType().Description}\", и размер Вашей " +
-                    $"зарплаты составляет {employee.CurrentSalary} {employee.SetEmployeeType().SalaryPerTimeDescription}, " +
+                    $"который работает по типу контракта \"{employee.CurrentEmployeeType.Description}\", и размер Вашей " +
+                    $"зарплаты составляет {employee.CurrentSalary} {employee.CurrentEmployeeType.SalaryPerTimeDescription}, " +
                     $"то за этот месяц вы получите {employee.ResultSalary} шмеклей.");
             }
 
@@ -31,37 +30,47 @@ namespace Lesson3
     }
 
     #region Классы типов сотрудников (шаблонный метод)
-    public abstract class BaseEmployee
+    internal abstract class BaseEmployee
     {
-        public BaseEmployee(string name, string surname, double currentSalary)
+        public BaseEmployee()
+        {
+        }
+
+        public BaseEmployee(string name, string surname, double currentSalary) : this()
         {
             Name = name;
             Surname = surname;
             CurrentSalary = currentSalary;
         }
         
-        public string Name { get; protected set; }
+        public string Name { get; set; }
 
-        public string Surname { get; protected set; }
+        public string Surname { get; set; }
 
-        public double CurrentSalary { get; protected set; }
+        public double CurrentSalary { get; set; }
+
+        public EmployeeType CurrentEmployeeType { get; protected set; }
 
         public double ResultSalary { get; protected set; }
 
-        public abstract EmployeeType SetEmployeeType();
+        public abstract void SetEmployeeType();
 
         public abstract double CountResultSalary();
     }
 
-    public class MonthlyEmployee : BaseEmployee
+    internal sealed class MonthlyEmployee : BaseEmployee
     {
+        public MonthlyEmployee()
+        {
+        }
+        
         public MonthlyEmployee(string name, string surname, double currentSalary) : base(name, surname, currentSalary)
         {
         }
 
-        public override EmployeeType SetEmployeeType()
+        public override void SetEmployeeType()
         {
-            return MonthlyType.Instance;
+            CurrentEmployeeType = MonthlyType.Instance;
         }
 
         public override double CountResultSalary()
@@ -71,15 +80,19 @@ namespace Lesson3
         }
     }
 
-    public class HourlyEmployee : BaseEmployee
+    internal sealed class HourlyEmployee : BaseEmployee
     {
+        public HourlyEmployee()
+        {
+        }
+        
         public HourlyEmployee(string name, string surname, double currentSalary) : base(name, surname, currentSalary)
         {
         }
 
-        public override EmployeeType SetEmployeeType()
+        public override void SetEmployeeType()
         {
-            return HourlyType.Instance;
+            CurrentEmployeeType = HourlyType.Instance;
         }
 
         public override double CountResultSalary()
@@ -91,7 +104,7 @@ namespace Lesson3
     #endregion
 
     #region Расширяемое описание типа сотрудника (синглтон + шаблонный метод)
-    public abstract class EmployeeType
+    internal abstract class EmployeeType
     {
         public int Id { get; }
 
@@ -107,7 +120,7 @@ namespace Lesson3
         }
     }
 
-    public class HourlyType : EmployeeType
+    internal sealed class HourlyType : EmployeeType
     {
         private static HourlyType _employeeType;
 
@@ -128,7 +141,7 @@ namespace Lesson3
         }
     }
 
-    public class MonthlyType : EmployeeType
+    internal sealed class MonthlyType : EmployeeType
     {
         private static MonthlyType _employeeType;
 
