@@ -14,7 +14,7 @@ namespace Lesson3
             {
                 new ConcreteEmployeeCreator().CreateEmployee(Employees.Monthly).Name("Смит").Surname("Смитов").CurrentSalary(300).SetResultSalary(),
                 new ConcreteEmployeeCreator().CreateEmployee(Employees.Hourly).Name("Кенни").Surname("Ворк").CurrentSalary(4).SetResultSalary(),
-                new ConcreteEmployeeCreator().CreateEmployee(Employees.Hourly).Name("Мистер").Surname("Раб").CurrentSalary(0.05).SetResultSalary(),
+                new ConcreteEmployeeCreator().CreateEmployee(Employees.Hourly).Name("Мистер").Surname("Раб").CurrentSalary(0.07).SetResultSalary(),
             };
 
             foreach (var employee in employees)
