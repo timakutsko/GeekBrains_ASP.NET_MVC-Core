@@ -6,4 +6,13 @@
     <StartupObject>Lesson4.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="StreetTrading.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Supermarket.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

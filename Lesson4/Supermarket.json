@@ -1,0 +1,19 @@
+{
+  "Fruits": [ 
+    { "Name": "Banana", "Price": 8.0, "Discount" : 0.1 },
+    { "Name": "Apple", "Price": 5.0, "Discount" : 0 },
+    { "Name": "Orange", "Price": 10.0, "Discount" : 0 }
+  ],
+  
+  "Vegetables":[ 
+    {"Name": "Potato", "Price": 4.0, "Discount" : 0.05 },
+    {"Name": "Garlic", "Price": 9.0, "Discount" : 0 },
+    {"Name": "Tomato", "Price": 2.0, "Discount" : 0 }
+  ],
+  
+  "Toys":[ 
+    {"Name": "Car", "Price": 4.0, "Discount" : 0.15 },
+    {"Name": "Barbie", "Price": 9.0, "Discount" : 0.2 },
+    {"Name": "Gun", "Price": 200.0, "Discount" : 0.3 }
+  ]
+}
