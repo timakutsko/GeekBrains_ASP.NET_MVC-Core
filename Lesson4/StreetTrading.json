@@ -1,0 +1,13 @@
+{
+  "ProductFruits": [ 
+    { "Name": "Banana", "Cost": 10 },
+    { "Name": "Apple", "Cost": 7  },
+    { "Name": "Orange", "Cost": 12}
+  ],
+  
+  "ProductVegetables":[ 
+    {"Name": "Potato", "Cost": 5 },
+    {"Name": "Garlic", "Cost": 10 },
+    {"Name": "Tomato", "Cost": 3 }
+  ]
+}
