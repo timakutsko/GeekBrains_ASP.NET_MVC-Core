@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson7", "Lesson7.csproj", "{FA0C2FEA-1376-42A1-95C8-A91B29C5B665}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orders.DAL", "..\Lesson6\Orders.DAL\Orders.DAL.csproj", "{FEDB043F-0808-4A99-B2AC-84223CD89167}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA0C2FEA-1376-42A1-95C8-A91B29C5B665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0C2FEA-1376-42A1-95C8-A91B29C5B665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0C2FEA-1376-42A1-95C8-A91B29C5B665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0C2FEA-1376-42A1-95C8-A91B29C5B665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDB043F-0808-4A99-B2AC-84223CD89167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDB043F-0808-4A99-B2AC-84223CD89167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDB043F-0808-4A99-B2AC-84223CD89167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDB043F-0808-4A99-B2AC-84223CD89167}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C5FFFC1-E791-4EA4-92BD-A80CA5BB07BE}
+	EndGlobalSection
+EndGlobal
