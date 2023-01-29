@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <partial name="Partial/_Styles" />
+</head>
+<body>
+    <partial name="Partial/_Header" />
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    
+    <partial name="Partial/_Footer" />
+
+    <partial name="Partial/_Scripts" />
+</body>
+</html>
